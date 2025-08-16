@@ -1,8 +1,8 @@
-# bcrypt-js
+# ts-bcrypt
 
 Optimized bcrypt implementation in TypeScript with zero dependencies. A secure password hashing library built from scratch using Node.js crypto module, compatible with modern JavaScript environments and also working in the browser.
 
-[![npm version](https://badge.fury.io/js/bcrypt-js.svg)](https://badge.fury.io/js/bcrypt-js)
+[![npm version](https://badge.fury.io/js/ts-bcrypt.svg)](https://badge.fury.io/js/ts-bcrypt)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](http://www.typescriptlang.org/)
 [![Buy Me A Coffee](https://img.shields.io/badge/☕-Buy%20me%20a%20coffee-orange.svg?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/reactbd)
@@ -31,25 +31,25 @@ The maximum input length is 1024 bytes (note that UTF-8 encoded characters use u
 ### NPM
 
 ```bash
-npm install bcrypt-js
+npm install ts-bcrypt
 ```
 
 ### Yarn
 
 ```bash
-yarn add bcrypt-js
+yarn add ts-bcrypt
 ```
 
 ### PNPM
 
 ```bash
-pnpm add bcrypt-js
+pnpm add ts-bcrypt
 ```
 
 ### Bun
 
 ```bash
-bun add bcrypt-js
+bun add ts-bcrypt
 ```
 
 ## Usage
@@ -62,7 +62,7 @@ import {
   comparePassword,
   hashPasswordSync,
   comparePasswordSync,
-} from "bcrypt-js";
+} from "ts-bcrypt";
 
 // Async hashing
 const hash = await hashPassword("myPassword");
@@ -76,7 +76,7 @@ const isMatchSync = comparePasswordSync("myPassword", hashSync);
 ### Salt Generation
 
 ```ts
-import { generateSalt, genSalt } from "bcrypt-js";
+import { generateSalt, genSalt } from "ts-bcrypt";
 
 const salt = generateSalt(); // Random 16-byte salt
 const customSalt = genSalt(12, 8); // Custom rounds and length
@@ -85,7 +85,7 @@ const customSalt = genSalt(12, 8); // Custom rounds and length
 ### Input Validation
 
 ```ts
-import { truncates, getRounds } from "bcrypt-js";
+import { truncates, getRounds } from "ts-bcrypt";
 
 // Check if password will be truncated
 const willTruncate = truncates("very long password...");
@@ -97,7 +97,7 @@ const iterations = getRounds(existingHash);
 ### Password Strength Validation
 
 ```ts
-import { isStrongPassword, safeHashPassword } from "bcrypt-js";
+import { isStrongPassword, safeHashPassword } from "ts-bcrypt";
 
 // Check if password is strong
 const isStrong = isStrongPassword("MyPassword123!");
@@ -120,7 +120,7 @@ try {
 ### Password Generation
 
 ```ts
-import { generateSecurePassword } from "bcrypt-js";
+import { generateSecurePassword } from "ts-bcrypt";
 
 // Generate a secure password (default: 16 chars)
 const password = generateSecurePassword();
@@ -137,7 +137,7 @@ const customPassword = generateSecurePassword(20, {
 ### Password Strength Analysis
 
 ```ts
-import { calculatePasswordStrength } from "bcrypt-js";
+import { calculatePasswordStrength } from "ts-bcrypt";
 
 const analysis = calculatePasswordStrength("MyPassword123!");
 console.log(analysis.score); // 0-100
@@ -147,7 +147,7 @@ console.log(analysis.feedback); // Array of improvement suggestions
 ### Salt Generation
 
 ```ts
-import { generateSalt } from "bcrypt-js";
+import { generateSalt } from "ts-bcrypt";
 
 const salt = generateSalt(); // Random 16-byte salt
 const customSalt = generateSalt(8); // Custom length salt

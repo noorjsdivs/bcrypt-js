@@ -1,6 +1,6 @@
 {
   "name": "ts-bcrypt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A TypeScript password hashing and validation library with extra utilities, built from scratch using Node.js crypto module.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/noorjsdivs/bcrypt-js.git"
+    "url": "git+https://github.com/noorjsdivs/ts-bcrypt.git"
   },
   "keywords": [
     "bcrypt",
