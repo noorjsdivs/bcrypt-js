@@ -1,5 +1,5 @@
 {
-  "name": "bcrypt-js",
+  "name": "ts-bcrypt",
   "version": "1.0.0",
   "description": "A TypeScript password hashing and validation library with extra utilities, built from scratch using Node.js crypto module.",
   "main": "dist/index.js",
